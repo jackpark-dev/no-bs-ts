@@ -44,3 +44,8 @@ node js-function-tests.js
   - ! (exclamation mark) - not be null
 - Optional function calls
   - callback?.();
+
+## #6 - Tuples in Typescript
+
+- Defining tuples
+- Tuples with different types
