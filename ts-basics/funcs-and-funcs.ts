@@ -23,3 +23,10 @@ export function arrayMutateFuction(
 
 const myNewMutateFunc: MutationFunction = (v: number) => v * 100;
 console.log(arrayMutateFuction([1, 2, 3], myNewMutateFunc));
+
+export function createAdder(num: number) {
+  return (val: number) => num + val;
+}
+
+const addOne = createAdder(1);
+console.log(addOne(55));
