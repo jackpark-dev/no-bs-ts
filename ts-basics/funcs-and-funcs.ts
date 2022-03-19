@@ -13,6 +13,7 @@ export function arrayMutate(
 }
 console.log(arrayMutate([1, 2, 3], (v) => v * 10));
 
+// Functions as types
 export type MutationFunction = (v: number) => number;
 export function arrayMutateFuction(
   numbers: number[],
@@ -24,7 +25,9 @@ export function arrayMutateFuction(
 const myNewMutateFunc: MutationFunction = (v: number) => v * 100;
 console.log(arrayMutateFuction([1, 2, 3], myNewMutateFunc));
 
-export function createAdder(num: number) {
+// Returning functions
+export type AdderFunction = (v: number) => number;
+export function createAdder(num: number): AdderFunction {
   return (val: number) => num + val;
 }
 

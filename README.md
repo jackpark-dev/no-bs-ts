@@ -27,3 +27,4 @@ node js-function-tests.js
 ## #3 - Typescript Functions with Functions
 
 - Functions as types
+- Returning functions 
