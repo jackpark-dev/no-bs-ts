@@ -28,3 +28,10 @@ node js-function-tests.js
 
 - Functions as types
 - Returning functions 
+
+## #4 - Function Overloading in Typescript
+
+- Function overloading
+  - unknown
+  - typeof
+  - as
