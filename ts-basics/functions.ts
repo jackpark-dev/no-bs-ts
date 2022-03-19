@@ -26,5 +26,5 @@ function introduce(salutation: string, ...names: string[]): string {
 }
 
 export function getName(user: { first: string; last: string }): string {
-  return `${user.first} ${user.last}`;
+  return `${user?.first ?? 'first'} ${user?.last ?? 'last'}`;
 }
