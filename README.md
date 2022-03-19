@@ -18,3 +18,8 @@ true Park
 
 - npx ts-node function-test.ts
 
+- js-function-tests.js
+```
+npx tsc function.ts
+node js-function-tests.js
+```
