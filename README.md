@@ -49,3 +49,7 @@ node js-function-tests.js
 
 - Defining tuples
 - Tuples with different types
+
+## #7 - Generics in Typescript
+
+- Making a generic function
