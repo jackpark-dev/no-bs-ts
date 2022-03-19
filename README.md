@@ -35,3 +35,12 @@ node js-function-tests.js
   - unknown
   - typeof
   - as
+
+## #5 - Optionals in Typescript
+
+- Optional parameter
+  - backtick in backtick
+- Optional fields
+  - ! (exclamation mark) - not be null
+- Optional function calls
+  - callback?.();
