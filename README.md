@@ -23,3 +23,5 @@ true Park
 npx tsc function.ts
 node js-function-tests.js
 ```
+
+## #3 - Typescript Functions with Functions
