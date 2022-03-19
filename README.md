@@ -53,3 +53,5 @@ node js-function-tests.js
 ## #7 - Generics in Typescript
 
 - Making a generic function
+- Overriding inferred generic type
+- Example #2 - Ranker
