@@ -13,3 +13,8 @@ npx tsc --init
 ```
 true Park
 ```
+
+## #2 - Typescript Functions
+
+- npx ts-node function-test.ts
+
