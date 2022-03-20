@@ -62,7 +62,7 @@ node js-function-tests.js
 - #1 - Pluck
 - #2 - Event Map
 
-## #8 - Typescript Utility Types
+## #9 - Typescript Utility Types
 
 - Pick
 - Required
@@ -70,3 +70,6 @@ node js-function-tests.js
 - Record
 - Omit
 - Types from fields
+
+## #10 - Readonly And Immutability in Typescript
+
