@@ -94,3 +94,6 @@ node js-function-tests.js
 - Making the value generic
 - Making the key generic
 
+## #14 - Mapped Types in Typescript
+https://www.typescriptlang.org/docs/handbook/2/mapped-types.html
+
