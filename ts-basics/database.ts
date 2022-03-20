@@ -4,7 +4,7 @@ interface Database {
 }
 
 class InMemoryDatabase implements Database {
-  db: Record<string, string> = {};
+  private db: Record<string, string> = {};
   get(id: string): string {
     return this.db[id];
   }
@@ -21,3 +21,4 @@ myDB.set('foo', 'bar');
 myDB.set('jack', 'park');
 console.log(myDB.get('foo'));
 myDB.printDB(); // { foo: 'bar', jack: 'park' }
+// myDB.db['foo'] = 'baz';

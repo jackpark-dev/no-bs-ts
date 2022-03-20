@@ -86,3 +86,4 @@ node js-function-tests.js
 ## #12 - Typescript Classes; Member Visibility and Implements
 
 - Implementing interfaces
+- Private member variables
