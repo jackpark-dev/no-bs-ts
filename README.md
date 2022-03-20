@@ -91,4 +91,6 @@ node js-function-tests.js
 
 ## #13 - Generics in Typescript Classes
 
-- Making value generics
+- Making the value generic
+- Making the key generic
+
