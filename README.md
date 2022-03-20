@@ -106,3 +106,8 @@ https://www.youtube.com/watch?v=nkpPOVUHT1k
 - Singletons
 - Static Member Fields
 - Static Methods
+
+## #16 - Abstract Classes in Typescript
+
+- Creating StreetFighter
+- Abstract Classes
