@@ -80,3 +80,5 @@ node js-function-tests.js
 
 - Enumerations
 - Literal types
+- Numeric literals
+- String literals
