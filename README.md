@@ -78,3 +78,4 @@ node js-function-tests.js
 
 ## #11 - Enums and Literal Types in Typescript
 
+- Enumerations
