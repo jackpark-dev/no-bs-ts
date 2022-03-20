@@ -1,5 +1,5 @@
 interface MyUser {
-  id: string;
+  id: number;
   name: string;
   email?: string;
   phone?: string;
@@ -24,7 +24,7 @@ const merge = (user: MyUser, overrides: MyUserOptionals) => {
 
 console.log(
   merge(
-    { id: 'foo', name: 'Jack', email: 'foo@foot.com' },
+    { id: 1, name: 'Jack', email: 'foo@foot.com' },
     {
       email: 'bar@bar.com',
     }
@@ -37,8 +37,10 @@ type RequiredMyUser = Required<MyUser>;
 // Pick
 type JustEmailAndName = Pick<MyUser, 'email' | 'name'>;
 
+type UserWithoutID = Omit<MyUser, 'id'>;
+
 // Record, Omit
-const mapById = (users: MyUser[]): Record<string, Omit<MyUser, 'id'>> => {
+const mapById = (users: MyUser[]): Record<MyUser['id'], UserWithoutID> => {
   return users.reduce((a, v) => {
     const { id, ...other } = v;
     return {
@@ -51,9 +53,9 @@ const mapById = (users: MyUser[]): Record<string, Omit<MyUser, 'id'>> => {
 console.log(
   mapById([
     {
-      id: 'foo',
+      id: 1,
       name: 'Mr. foo',
     },
-    { id: 'bar', name: 'Mr. bar' },
+    { id: 2, name: 'Mr. bar' },
   ])
 );

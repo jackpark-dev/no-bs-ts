@@ -68,3 +68,5 @@ node js-function-tests.js
 - Required
 - Pick
 - Record
+- Omit
+- Types from fields
