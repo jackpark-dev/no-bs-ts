@@ -88,3 +88,7 @@ node js-function-tests.js
 - Implementing interfaces
 - Private member variables
 - Extending existing classes
+
+## #13 - Generics in Typescript Classes
+
+- Making value generics
