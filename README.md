@@ -97,3 +97,11 @@ node js-function-tests.js
 ## #14 - Mapped Types in Typescript
 https://www.typescriptlang.org/docs/handbook/2/mapped-types.html
 
+
+## #15 - Readonly and Static in Typescript Classes
+https://www.youtube.com/watch?v=nkpPOVUHT1k
+- Creating The Dog Classes
+- Members in Constructors
+- Readonly Member Fields
+- Singletons
+- Static Member Fields
