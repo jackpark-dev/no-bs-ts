@@ -13,9 +13,9 @@ class DogList {
 
   private constructor() {}
 
-  public addDog(dog: Doggy) {
-    this.doggies.push(dog);
+  static addDog(dog: Doggy) {
+    DogList.instance.doggies.push(dog);
   }
 }
 
-DogList.instance.addDog(lgg);
+DogList.addDog(lgg);

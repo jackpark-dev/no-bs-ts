@@ -105,3 +105,4 @@ https://www.youtube.com/watch?v=nkpPOVUHT1k
 - Readonly Member Fields
 - Singletons
 - Static Member Fields
+- Static Methods
