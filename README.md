@@ -111,3 +111,9 @@ https://www.youtube.com/watch?v=nkpPOVUHT1k
 
 - Creating StreetFighter
 - Abstract Classes
+- Abstract Accessors
+
+
+## #17 - Mixins in Typescript
+https://www.typescriptlang.org/docs/handbook/mixins.html
+
