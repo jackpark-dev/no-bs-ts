@@ -55,3 +55,9 @@ node js-function-tests.js
 - Making a generic function
 - Overriding inferred generic type
 - Example #2 - Ranker
+
+
+## #8 - Generics with keyof in Typescript
+
+- #1 - Pluck
+- #2 - Event Map
