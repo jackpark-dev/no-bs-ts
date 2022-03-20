@@ -82,3 +82,7 @@ node js-function-tests.js
 - Literal types
 - Numeric literals
 - String literals
+
+## #12 - Typescript Classes; Member Visibility and Implements
+
+- Implementing interfaces
