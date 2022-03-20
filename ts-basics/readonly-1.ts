@@ -22,7 +22,7 @@ function makeCoordinate(
 }
 
 const c1 = makeCoordinate(10, 20, 30);
-c1[0] = 50;
+// c1[0] = 50;
 
 const reallyConst = [1, 2, 3] as const;
-reallyConst[0] = 50;
+// reallyConst[0] = 50;

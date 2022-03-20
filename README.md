@@ -73,3 +73,8 @@ node js-function-tests.js
 
 ## #10 - Readonly And Immutability in Typescript
 
+- readonly
+- as const (no as readonly)
+
+## #11 - Enums and Literal Types in Typescript
+
