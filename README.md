@@ -61,3 +61,10 @@ node js-function-tests.js
 
 - #1 - Pluck
 - #2 - Event Map
+
+## #8 - Typescript Utility Types
+
+- Pick
+- Required
+- Pick
+- Record
