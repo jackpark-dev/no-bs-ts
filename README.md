@@ -124,3 +124,8 @@ https://www.typescriptlang.org/docs/handbook/mixins.html
 - Functions creating generic classes
 - Creating a mixin
 - Review
+
+## #18 - Conditional Types in Typescript
+
+https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
+
