@@ -38,3 +38,18 @@ function fetchPokemon<T extends undefined | ((data: PokemonResults) => void)>(
     return fetch(url).then((resp) => resp.json()) as FetchPokemonResult<T>;
   }
 }
+
+fetchPokemon('https://pokeapi.co/api/v2/pokemon?limit=10', (data) => {
+  data.results.forEach((item) => console.log(item.name));
+});
+
+(async function () {
+  const data =
+    await fetchPokemon("https://pokeapi.co/api/v2/pokemon?limit=10") as PokemonResults;
+  /*
+  const data = <PokemonResults>(
+    await fetchPokemon("https://pokeapi.co/api/v2/pokemon?limit=10")
+  );
+  */
+  data.results.forEach(({ name }) => console.log(name));
+})();
