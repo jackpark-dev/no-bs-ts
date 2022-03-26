@@ -22,10 +22,10 @@ interface PokemonResults {
 }
 
 type FetchPokemonResult<T> = T extends undefined
-  ? Promise<PokemonResults[]>
+  ? Promise<PokemonResults>
   : void;
 
-function fetchPokemon<T extends undefined | ((data: PokemonResults[]) => void)>(
+function fetchPokemon<T extends undefined | ((data: PokemonResults) => void)>(
   url: string,
   cb?: T
 ): FetchPokemonResult<T> {
