@@ -129,3 +129,8 @@ https://www.typescriptlang.org/docs/handbook/mixins.html
 
 https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 
+- Introduction
+- What are conditional types?
+- Importing libraries
+- fetchPokemon with conditionals
+- fetchPokemon with overloading
