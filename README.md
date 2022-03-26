@@ -27,7 +27,7 @@ node js-function-tests.js
 ## #3 - Typescript Functions with Functions
 
 - Functions as types
-- Returning functions 
+- Returning functions
 
 ## #4 - Function Overloading in Typescript
 

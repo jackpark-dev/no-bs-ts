@@ -26,6 +26,12 @@ type OptionalFlags<Type> = {
 
 type DogInfoOptions = OptionalFlags<DogInfo>;
 
+/** Where do i use DogInfoOptions */
+const dogInfoOptions: DogInfoOptions = {
+  name: null,
+  age: null,
+};
+
 // Template Literals, Capitalize Utility Type, Optionals Mapped Types
 type Listeners<Type> = {
   [Property in keyof Type as `on${Capitalize<string & Property>}Change`]?: (
