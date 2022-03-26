@@ -117,3 +117,10 @@ https://www.youtube.com/watch?v=nkpPOVUHT1k
 ## #17 - Mixins in Typescript
 https://www.typescriptlang.org/docs/handbook/mixins.html
 
+- Introduction
+- Mixins Page
+- Functions creating functions
+- Functions creating classes
+- Functions creating generic classes
+- Creating a mixin
+- Review
