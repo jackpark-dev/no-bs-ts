@@ -11,3 +11,33 @@ function addFullName(name: Name): Name & { fullName: string } {
 }
 
 console.log(addFullName({ first: 'Jack', last: 'Park' }));
+
+/** Parameters and ReturnType */
+function permuteRows<T extends (...args: any[]) => any>(
+  iteratorFunc: T,
+  data: Parameters<T>[0][]
+): ReturnType<T>[] {
+  return data.map(iteratorFunc);
+}
+
+console.log(permuteRows(addFullName, [{ first: 'Jack', last: 'Park' }]));
+
+class PersonWithFullName {
+  constructor(public name: Name) {}
+
+  get fullName() {
+    return `${this.name.first} ${this.name.last}`;
+  }
+}
+
+/** onstructorParameters and InstanceType */
+function createObjects<T extends new (...args: any[]) => any>(
+  ObjectType: T,
+  data: ConstructorParameters<T>[0][]
+): InstanceType<T>[] {
+  return data.map((item) => new ObjectType(item));
+}
+
+console.log(
+  createObjects(PersonWithFullName, [{ first: 'Jack', last: 'Park' }])
+);

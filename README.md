@@ -139,3 +139,6 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 
 - Utility Types in the handbook
 - Function setup
+- Parameters and ReturnType
+- Class setup
+- ConstructorParameters and InstanceType
