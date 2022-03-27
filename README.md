@@ -118,7 +118,7 @@ https://www.youtube.com/watch?v=nkpPOVUHT1k
 https://www.typescriptlang.org/docs/handbook/mixins.html
 
 - Introduction
-- Mixins Page
+- Mixins **Page**
 - Functions creating functions
 - Functions creating classes
 - Functions creating generic classes
@@ -152,4 +152,15 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 - Components children
 - Components with complex properties
 - Event handlers
+- useCallback
+
+
+## #21 - Typescript/React - Hooks
+
+- Cheatsheet
+  - https://github.com/typescript-cheatsheets/react
+- useState
+- useEffect
+- useReducer
+- useRef
 - useCallback

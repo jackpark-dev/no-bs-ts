@@ -54,3 +54,4 @@ const pokemon: Pokemon[] = [
 ];
 const ranks = ranker(pokemon, ({ hp }) => hp);
 console.log('TCL: ranks', ranks);
+
