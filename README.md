@@ -149,3 +149,5 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
   ```
   yarn create react-app episode-20 --template typescript
   ```
+- Components children
+- Components with complex properties
