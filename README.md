@@ -134,3 +134,8 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 - Importing libraries
 - fetchPokemon with conditionals
 - fetchPokemon with overloading
+
+#19 - Utility Types in Typescript - Part 2
+
+- Utility Types in the handbook
+- Function setup
