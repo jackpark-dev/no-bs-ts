@@ -151,3 +151,5 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
   ```
 - Components children
 - Components with complex properties
+- Event handlers
+- useCallback
