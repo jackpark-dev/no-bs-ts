@@ -3,13 +3,18 @@ import './App.css';
 
 const Heading = ({ title }: { title?: string }) => <h2>{title}</h2>;
 
-const Box = ({ children }: { children: React.ReactNode }) => {
+const Box: React.FC = ({ children }) => {
   return <div>{children}</div>;
 };
 
 function App() {
   return (
-    <div>
+    <div
+      style={{
+        padding: '1rem',
+        fontWeight: 'bold',
+      }}
+    >
       <Heading title="Instruction" />
       <Box>Hello there</Box>
     </div>
