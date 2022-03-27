@@ -135,10 +135,17 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 - fetchPokemon with conditionals
 - fetchPokemon with overloading
 
-#19 - Utility Types in Typescript - Part 2
+## #19 - Utility Types in Typescript - Part 2
 
 - Utility Types in the handbook
 - Function setup
 - Parameters and ReturnType
 - Class setup
 - ConstructorParameters and InstanceType
+
+## #20 - Typescript/React - Setup and Properties
+
+- Creating the React App
+  ```
+  yarn create react-app episode-20 --template typescript
+  ```

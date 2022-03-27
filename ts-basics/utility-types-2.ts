@@ -30,7 +30,7 @@ class PersonWithFullName {
   }
 }
 
-/** onstructorParameters and InstanceType */
+/** ConstructorParameters and InstanceType */
 function createObjects<T extends new (...args: any[]) => any>(
   ObjectType: T,
   data: ConstructorParameters<T>[0][]
@@ -40,4 +40,10 @@ function createObjects<T extends new (...args: any[]) => any>(
 
 console.log(
   createObjects(PersonWithFullName, [{ first: 'Jack', last: 'Park' }])
+);
+
+console.log(
+  createObjects(PersonWithFullName, [{ first: 'Jack', last: 'Park' }]).map(
+    (obj) => obj.fullName
+  )
 );
