@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useReducer, useState } from 'react';
 import './App.css';
 
 const Heading = ({ title }: { title?: string }) => <h2>{title}</h2>;
@@ -26,6 +26,16 @@ interface Payload {
   text: string;
 }
 
+interface Todo {
+  id: number;
+  done: boolean;
+  text: string;
+}
+
+type ActionType =
+  | { type: 'ADD'; text: string }
+  | { type: 'REMOVE'; id: number };
+
 function App() {
   const onListClicked = useCallback((item: string) => {
     alert(item);
@@ -39,6 +49,22 @@ function App() {
       .then((data) => {
         setPayload(data);
       });
+  }, []);
+
+  const [todos, dispatch] = useReducer((state: Todo[], action: ActionType) => {
+    switch (action.type) {
+      case 'ADD':
+        return [
+          ...state,
+          {
+            id: state.length,
+            text: action.text,
+            done: false,
+          },
+        ];
+      case 'REMOVE':
+        return state.filter((item) => item.id !== action.id);
+    }
   }, []);
 
   return (
