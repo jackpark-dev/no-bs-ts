@@ -63,14 +63,21 @@ const Button: React.FC<
   React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
-  >
-> = ({ children, style, ...rest }) => {
+  > & {
+    title?: string;
+  }
+> = ({ title, children, style, ...rest }) => {
   return (
     <button
       {...rest}
-      style={{ ...style, backgroundColor: 'red', color: 'white' }}
+      style={{
+        ...style,
+        backgroundColor: 'red',
+        color: 'white',
+        fontSize: 'xx-large',
+      }}
     >
-      {children}
+      {title ?? children}
     </button>
   );
 };
@@ -87,7 +94,7 @@ const Incrementer: React.FC<{
   value: UseNumberValue;
   setValue: UseNumberSetValue;
 }> = ({ value, setValue }) => (
-  <Button onClick={() => setValue(value + 1)}>Add - {value}</Button>
+  <Button onClick={() => setValue(value + 1)} title={`Add - ${value}`} />
 );
 
 function App() {
