@@ -64,7 +64,10 @@ type ActionType =
 
 const Incrementer: React.FC<{
   value: number;
-}> = ({ value }) => <button>Add - {value}</button>;
+  setValue: React.Dispatch<React.SetStateAction<number>>;
+}> = ({ value, setValue }) => (
+  <button onClick={() => setValue(value + 1)}>Add - {value}</button>
+);
 
 function App() {
   const onListClicked = useCallback((item: string) => {
@@ -123,6 +126,7 @@ function App() {
       <Box>Hello there</Box>
       <List items={['one', 'two', 'three']} onClick={onListClicked} />
       <Box>{JSON.stringify(payload)}</Box>
+      <Incrementer value={value} setValue={setValue} />
       <Heading title="TODOs" />
       {todos.map((todo) => (
         <div key={todo.id}>
