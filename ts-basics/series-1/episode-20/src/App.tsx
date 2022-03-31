@@ -58,6 +58,23 @@ interface Todo {
   text: string;
 }
 
+// https://unpkg.com/@types/react@17.0.2/index.d.ts - interface IntrinsicElements['button']
+const Button: React.FC<
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >
+> = ({ children, style, ...rest }) => {
+  return (
+    <button
+      {...rest}
+      style={{ ...style, backgroundColor: 'red', color: 'white' }}
+    >
+      {children}
+    </button>
+  );
+};
+
 type ActionType =
   | { type: 'ADD'; text: string }
   | { type: 'REMOVE'; id: number };
@@ -70,7 +87,7 @@ const Incrementer: React.FC<{
   value: UseNumberValue;
   setValue: UseNumberSetValue;
 }> = ({ value, setValue }) => (
-  <button onClick={() => setValue(value + 1)}>Add - {value}</button>
+  <Button onClick={() => setValue(value + 1)}>Add - {value}</Button>
 );
 
 function App() {
@@ -149,7 +166,7 @@ function App() {
       ))}
       <div>
         <input type="text" ref={newTodoRef} />
-        <button onClick={onAddTodo}>Add Todo</button>
+        <Button onClick={onAddTodo}>Add Todo</Button>
       </div>
     </div>
   );

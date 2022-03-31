@@ -170,4 +170,5 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 - Typing useState as props - Prop Drilling useState
 - Using ReturnType
 - DetailedHTMLProps
+  - https://unpkg.com/@types/react@17.0.2/index.d.ts
 - Adding custom props
