@@ -1,4 +1,10 @@
-import React, { useCallback, useEffect, useReducer, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useReducer,
+  useRef,
+  useState,
+} from 'react';
 import './App.css';
 
 const Heading = ({ title }: { title?: string }) => <h2>{title}</h2>;
@@ -21,6 +27,26 @@ const List: React.FC<{
     </ul>
   );
 };
+
+const ListFunc = ({
+  items,
+  onClick,
+}: {
+  items: string[];
+  onClick?: (item: string) => void;
+}) => {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index} onClick={() => onClick?.(item)}>
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+const listFunc = ListFunc({ items: ['a', 'b', 'c'] });
 
 interface Payload {
   text: string;
@@ -64,9 +90,21 @@ function App() {
         ];
       case 'REMOVE':
         return state.filter((item) => item.id !== action.id);
+      default:
+        throw new Error();
     }
   }, []);
 
+  const newTodoRef = useRef<HTMLInputElement>(null);
+  const onAddTodo = useCallback(() => {
+    if (newTodoRef.current) {
+      dispatch({
+        type: 'ADD',
+        text: newTodoRef.current.value,
+      });
+      newTodoRef.current.value = '';
+    }
+  }, []);
   return (
     <div
       style={{
@@ -78,6 +116,26 @@ function App() {
       <Box>Hello there</Box>
       <List items={['one', 'two', 'three']} onClick={onListClicked} />
       <Box>{JSON.stringify(payload)}</Box>
+      <Heading title="TODOs" />
+      {todos.map((todo) => (
+        <div key={todo.id}>
+          {todo.text}
+          <button
+            onClick={() => {
+              dispatch({
+                type: 'REMOVE',
+                id: todo.id,
+              });
+            }}
+          >
+            Remove
+          </button>
+        </div>
+      ))}
+      <div>
+        <input type="text" ref={newTodoRef} />
+        <button onClick={onAddTodo}>Add Todo</button>
+      </div>
     </div>
   );
 }
