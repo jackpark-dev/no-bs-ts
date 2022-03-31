@@ -10,7 +10,7 @@ import './App.css';
 const Heading = ({ title }: { title?: string }) => <h2>{title}</h2>;
 
 const Box: React.FC = ({ children }) => {
-  return <div>{children}</div>;
+  return <div style={{ padding: '1rem', fontWeight: 'bold' }}>{children}</div>;
 };
 
 const List: React.FC<{
@@ -62,6 +62,10 @@ type ActionType =
   | { type: 'ADD'; text: string }
   | { type: 'REMOVE'; id: number };
 
+const Incrementer: React.FC<{
+  value: number;
+}> = ({ value }) => <button>Add - {value}</button>;
+
 function App() {
   const onListClicked = useCallback((item: string) => {
     alert(item);
@@ -105,6 +109,9 @@ function App() {
       newTodoRef.current.value = '';
     }
   }, []);
+
+  const [value, setValue] = useState(0);
+
   return (
     <div
       style={{

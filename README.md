@@ -164,3 +164,10 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 - useReducer
 - useRef
 - **useCallback**
+
+## #22 - Typescript/React - Advanced Properties
+
+- Typing useState as props - Prop Drilling useState
+- Using ReturnType
+- DetailedHTMLProps
+- Adding custom props
