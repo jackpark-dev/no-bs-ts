@@ -180,6 +180,7 @@ function App() {
       <Heading title="TODOs" />
       <UL
         items={todos}
+        itemClick={(item) => alert(item.text)}
         render={(todo) => (
           <>
             {todo.text}
