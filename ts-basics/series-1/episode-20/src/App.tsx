@@ -117,7 +117,7 @@ function App() {
       addTodo(newTodoRef.current.value);
       newTodoRef.current.value = '';
     }
-  }, []);
+  }, [addTodo]);
 
   const [value, setValue] = useState(0);
 
