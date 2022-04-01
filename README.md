@@ -187,3 +187,12 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 - Supporting children
 - Generic event handlers
 - Outroduction
+
+## #25 - Typescript/React - useContext
+
+- Project review
+- createContext
+- Creating the Provider
+- Using the Provider
+- Custom hooks with context
+- Consuming context

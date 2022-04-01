@@ -102,7 +102,7 @@ function UL<T>({
 > & {
   items: T[];
   render: (item: T) => React.ReactNode;
-  itemClick: (item: T) => void;
+  itemClick: (item: T) => void; // render props as well as callback
 }) {
   return (
     <ul>
@@ -202,4 +202,16 @@ function App() {
   );
 }
 
-export default App;
+const AppWrapper = () => (
+  <div
+    style={{
+      display: 'grid',
+      gridTemplateColumns: '50% 50%',
+    }}
+  >
+    <App></App>
+    <App></App>
+  </div>
+);
+
+export default AppWrapper;
