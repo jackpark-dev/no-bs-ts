@@ -58,6 +58,10 @@ function useTodosManager(initialValue: Todo[]): {
   return { todos, addTodo, removeTodo };
 }
 
-export const TodosProvider: React.FC<{initialsTodos: Todo[];}> = ({ initialsTodos, children}) => (
-  <TodoContext.Provider>{children}</TodoContext.Provider>
-);
+export const TodosProvider: React.FC<{ initialsTodos: Todo[] }> = ({
+  initialsTodos,
+  children,
+}) => {
+  const value = useTodosManager(initialsTodos);
+  return <TodoContext.Provider value={value}>{children}</TodoContext.Provider>;
+};
