@@ -3,13 +3,11 @@ import React, {
   HTMLAttributes,
   useCallback,
   useEffect,
-  useReducer,
   useRef,
   useState,
 } from 'react';
-import { useTodos } from './useTodos';
 import './App.css';
-import { render } from '@testing-library/react';
+import { useTodos } from './useTodos';
 
 const Heading = ({ title }: { title?: string }) => <h2>{title}</h2>;
 
@@ -93,14 +91,44 @@ const Incrementer: React.FC<{
   </Button>
 );
 
+// 1. Basic
 function UL<T>({
   items,
   render,
-}: DetailedHTMLFactory<HTMLAttributes<HTMLUListElement>, HTMLUListElement>
-& {
+  itemClick,
+}: React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLUListElement>,
+  HTMLUListElement
+> & {
   items: T[];
   render: (item: T) => React.ReactNode;
+  itemClick: (item: T) => void;
 }) {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li onClick={() => itemClick(item)} key={index}>
+          {render(item)}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+// 2. Supporting children
+function ULChildren<T>({
+  items,
+  render,
+  children,
+}: React.PropsWithChildren<
+  React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLUListElement>,
+    HTMLUListElement
+  > & {
+    items: T[];
+    render: (item: T) => React.ReactNode;
+  }
+>) {
   return (
     <ul>
       {items.map((item, index) => (
