@@ -172,3 +172,10 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 - DetailedHTMLProps
   - https://unpkg.com/@types/react@17.0.2/index.d.ts
 - Adding custom props
+
+## #23 - Typescript/React - Custom Hooks
+
+- Cleanup
+- Creating useTodos
+- useCallback
+- Using useTodos
