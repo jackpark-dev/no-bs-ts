@@ -202,6 +202,7 @@ function App() {
   );
 }
 
+// https://github.com/jherr/no-bs-ts/blob/master/series-1/episode-25/src/App.tsx
 const AppWrapper = () => (
   <div
     style={{

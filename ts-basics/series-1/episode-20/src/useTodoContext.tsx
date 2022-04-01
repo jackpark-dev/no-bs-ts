@@ -10,6 +10,7 @@ type ActionType =
   | { type: 'ADD'; text: string }
   | { type: 'REMOVE'; id: number };
 
+// ✓ Type define using ReturnType
 type UserTodosManagerResult = ReturnType<typeof useTodosManager>;
 
 const TodoContext = React.createContext<UserTodosManagerResult>({
@@ -58,10 +59,25 @@ function useTodosManager(initialValue: Todo[]): {
   return { todos, addTodo, removeTodo };
 }
 
+// Creating the Provier
 export const TodosProvider: React.FC<{ initialsTodos: Todo[] }> = ({
   initialsTodos,
   children,
 }) => {
   const value = useTodosManager(initialsTodos);
   return <TodoContext.Provider value={value}>{children}</TodoContext.Provider>;
+};
+
+// Custom hooks
+export const useTodos = (): Todo[] => {
+  const { todos } = React.useContext(TodoContext);
+  return todos;
+};
+export const useAddTodo = (): UserTodosManagerResult['addTodo'] => {
+  const { addTodo } = React.useContext(TodoContext);
+  return addTodo;
+};
+export const useRemoveTodo = (): UserTodosManagerResult['removeTodo'] => {
+  const { removeTodo } = React.useContext(TodoContext);
+  return removeTodo;
 };
