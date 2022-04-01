@@ -179,3 +179,11 @@ https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 - Creating useTodos
 - useCallback
 - Using useTodos
+
+## #24 - Typescript/React - Generic Components
+
+- Creating a generic component
+- Adding DetailedHTMLProps
+- Supporting children
+- Generic event handlers
+- Outroduction

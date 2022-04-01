@@ -7,6 +7,7 @@ import React, {
 } from 'react';
 import { useTodos } from './useTodos';
 import './App.css';
+import { render } from '@testing-library/react';
 
 const Heading = ({ title }: { title?: string }) => <h2>{title}</h2>;
 
@@ -77,10 +78,6 @@ const Button: React.FC<
   );
 };
 
-type ActionType =
-  | { type: 'ADD'; text: string }
-  | { type: 'REMOVE'; id: number };
-
 const useNumber = (initialValue: number) => useState<number>(initialValue);
 type UseNumberValue = ReturnType<typeof useNumber>[0];
 type UseNumberSetValue = ReturnType<typeof useNumber>[1];
@@ -93,6 +90,22 @@ const Incrementer: React.FC<{
     didn't show
   </Button>
 );
+
+function UL<T>({
+  items,
+  render,
+}: {
+  items: T[];
+  render: (item: T) => React.ReactNode;
+}) {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{render(item)}</li>
+      ))}
+    </ul>
+  );
+}
 
 function App() {
   const onListClicked = useCallback((item: string) => {
@@ -134,6 +147,15 @@ function App() {
       <Box>{JSON.stringify(payload)}</Box>
       <Incrementer value={value} setValue={setValue} />
       <Heading title="TODOs" />
+      <UL
+        items={todos}
+        render={(todo) => (
+          <>
+            {todo.text}
+            <button onClick={() => removeTodo(todo.id)}>Remove</button>
+          </>
+        )}
+      />
       {todos.map((todo) => (
         <div key={todo.id}>
           {todo.text}
