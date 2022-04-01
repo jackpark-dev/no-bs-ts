@@ -1,4 +1,6 @@
 import React, {
+  DetailedHTMLFactory,
+  HTMLAttributes,
   useCallback,
   useEffect,
   useReducer,
@@ -94,7 +96,8 @@ const Incrementer: React.FC<{
 function UL<T>({
   items,
   render,
-}: {
+}: DetailedHTMLFactory<HTMLAttributes<HTMLUListElement>, HTMLUListElement>
+& {
   items: T[];
   render: (item: T) => React.ReactNode;
 }) {
